@@ -3,22 +3,29 @@ body{
     background-size: 100%;
 }
 
-
-.header,.about, .education, .experience, .skills, .contact{
+.grid{
     width: 70%;
-    height: 400px;
+    grid-gap: 2%;
     margin: 100px auto;
-    box-shadow: 1px 1px 5px grey;
+    display: grid;
+    grid-template-areas: "header header header header" "about about about skills" "education education experience experience" "contact contact contact contact";
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+
+.header,.about, .skills, .experience, .education, .contact{
+    height: 400px;
+    box-shadow: 1px 1px 5px grey;
+}
 
 .header{
     height: 400px;
     background: #21bb63;
-    margin: 150px auto;
-    margin-bottom: -50px; /*переделать*/
+
     color: #fff;
     position: relative;
+    grid-area: header;
 }
 
 .header h1, .header h2, .header address, .icon{
@@ -51,10 +58,26 @@ body{
 }
 
 
-
 .about{
-    height: 200px;
+    grid-area: about;
 }
+
+.skills {
+    grid-area: skills;
+}
+
+.experience{
+    grid-area: experience;
+}
+
+.education{
+    grid-area: education;
+}
+
+.contact{
+    grid-area: contact;
+}
+
 
 
 
@@ -62,13 +85,13 @@ body{
 
 
 @media(max-width: 1100px ){
-    .header{
+    .header,.about, .skills, .experience, .education, .contact{
         width: 90%;
     }
 }
 
 @media(max-width: 700px ){
-    .header{
+    .header,.about, .skills, .experience, .education, .contact{
         width: 100%;
     }
 
