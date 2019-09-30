@@ -52,10 +52,9 @@ h1{
     grid-area: header;
 }
 
-.header h1, .header h2, .header address, .icon, .adr{
+.header h1, .header h2, .header address,.header .icon,.header .adr{
     position: relative;
     left: 3vw;
-    top: 3vw;
 
 }
 
@@ -64,12 +63,16 @@ h1{
     text-shadow: 1px 1px 2px #2f2a30;
     top: 10%;
     color: #fff;
-    word-spacing: 100vw;
 }
 
 .header h2{
     font: 28px sans-serif;
     color: #2270b7;
+}
+
+.name{
+    margin-top: 30px;
+    width:48%;
 }
 
 .adr{
@@ -81,7 +84,7 @@ h1{
 
 .header .links{
     position: absolute;
-    bottom: 15%;
+    bottom: 10%;
 }
 
 .links a{
@@ -205,7 +208,7 @@ form input{
 
 @media(max-width: 1200px ){
     .grid{
-        width: 90%;
+        width: 95%;
         grid-gap: 3%;
     }
 }
@@ -213,7 +216,7 @@ form input{
 @media(max-width: 800px ){
     .grid{
         width: 100%;
-        grid-template-areas: "header" "about" "skills" "education" "experience" "social" "contact";
+        grid-template-areas: "header" "about" "skills" "education" "experience" "contact" "social" ;
         grid-template-rows: 0.6fr 1fr 150px 1fr 1fr 0.5fr 0.5fr;
         grid-template-columns: 1fr ;
         grid-gap: 1%;
@@ -232,16 +235,21 @@ form input{
 
     .header h1{
         text-align: center;
-        top:65%;
         left:0;
-
-
+        font-size: 26px;
+        margin-top: 21%;
     }
 
     .header h2{
         left:0;
         text-align: center;
-        top:65%;
+        font-size: 20px;
+        margin-top: 1%;
+    }
+
+    .name{
+        display: inline;
+        margin: 0 auto;
     }
 
     .header .links{
@@ -266,18 +274,12 @@ form input{
         font: 20px sans-serif;
     }
 
-}
-
-@media(max-width: 600px ){
-
-    .grid{
-        width: 100%;
-        margin: 200px auto;
+    .social{
+        padding-top: 20px;
     }
 
+
 }
-
-
 
 
 .frame{
@@ -301,21 +303,19 @@ h1 img{
 .social{
     grid-area: social;
     background: #da9622;
+    padding:0 10px;
 
 }
 
 .social .links{
-    margin: -10px 0 0 -80px;
+    margin: 30px auto;
     text-align: center;
     font-size: 10px;
 }
 
-
-
 .form{
     border-left: 4px dotted white;
 }
-
 
 
 /* Трансформация/Анимация */
@@ -335,3 +335,4 @@ h1 img{
 - перебрать весь код
 
 */
+
