@@ -1,3 +1,12 @@
+/*
+- Использован grid (2 раза)
+- Абсолютные и относительные единицы измерения
+- Медиа-запросы
+- Трансформация и анимация
+- Svg
+- Множественные селекторы, псевдоселекторы
+*/
+
 
 html{
     font: 16px sans-serif;
@@ -58,7 +67,6 @@ h1{
     font: 30px sans-serif;
     color: #2270b7;
 }
-
 
 .header{
     height: 400px;
@@ -171,6 +179,22 @@ button a{
     background: #fff;
 }
 
+.social{
+    grid-area: social;
+    background: #da9622;
+    padding:0 10px;
+}
+
+.social .links{
+    margin: 30px auto;
+    text-align: center;
+    font-size: 10px;
+}
+
+.form{
+    border-left: 4px dotted white;
+}
+
 .contact{
     grid-area: contact;
     background: #da9622;
@@ -213,7 +237,7 @@ form input{
 }
 
 
-
+/*Медиа-запросы*/
 @media(max-width: 1200px){
     .grid{
         width: 95%;
@@ -241,6 +265,19 @@ form input{
         margin: -20% auto;
     }
 
+    .name{
+        display: inline;
+        margin: 0 auto;
+    }
+
+    .header{
+        height: 240px;
+    }
+
+    .header .links{
+        display: none;
+    }
+
     .header h1{
         text-align: center;
         left:0;
@@ -255,18 +292,6 @@ form input{
         margin-top: 1%;
     }
 
-    .name{
-        display: inline;
-        margin: 0 auto;
-    }
-
-    .header .links{
-        display: none;
-    }
-
-    .header{
-        height: 240px;
-    }
 
     .grid-skills{
         display: grid;
@@ -286,40 +311,47 @@ form input{
         padding-top: 20px;
     }
 
-
 }
-
-.social{
-    grid-area: social;
-    background: #da9622;
-    padding:0 10px;
-}
-
-.social .links{
-    margin: 30px auto;
-    text-align: center;
-    font-size: 10px;
-}
-
-.form{
-    border-left: 4px dotted white;
-}
-
 
 /* Трансформация/Анимация */
-
 .icon:hover{
     transform: scale(1.3);
+}
+
+h1 img{
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.about:hover h1 img{
+    transform: rotateY(180deg);
+}
+
+.education:hover h1 img{
+    transform: rotateY(180deg);
+}
+
+.experience:hover h1 img{
+    transform: rotateY(180deg);
+}
+
+.skills:hover h1 img{
+    transform: rotateY(180deg);
+}
+
+.contact:hover h1 img{
+    transform: rotateY(180deg);
 }
 
 
 
 /*TODO
-- добавить иконки svg
-- сделать 3-4 разных анимации
+- Анимация в самом svg?
+- перебрать весь код + комментарии
 - поддержка браузерами
-- комментарии
-- перебрать весь код
-- придумать лого
+- сделать еще одн анимацию и посмотреть прошлые
 */
+
+
 
