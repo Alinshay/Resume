@@ -1,7 +1,6 @@
 
 html{
     font: 16px sans-serif;
-
 }
 
 #background{
@@ -23,7 +22,6 @@ html{
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-
 .header,.about, .skills, .experience, .education, .contact{
     box-shadow: 1px 1px 5px grey;
 }
@@ -36,6 +34,25 @@ html{
     border-left: 15px solid #da9622;
     background: #fff;
 }
+
+.frame{
+    border-left: #2270b7 dotted 4px;
+    padding-left: 20px;
+    line-height: 1.5;
+}
+
+b{
+    color: #2270b7;
+}
+
+.education h2, .experience h2{
+    font-weight: bold;
+}
+
+h1 img{
+    width: 50px;
+}
+
 
 h1{
     font: 30px sans-serif;
@@ -55,7 +72,6 @@ h1{
 .header h1, .header h2, .header address,.header .icon,.header .adr{
     position: relative;
     left: 3vw;
-
 }
 
 .header h1{
@@ -95,19 +111,15 @@ h1{
     width: 35px;
 }
 
-
 #photo {
-
     height: 400px;
     position: absolute;
     right: 0;
 }
 
-
 #mobile-photo{
     display: none;
 }
-
 
 .about{
     grid-area: about;
@@ -120,14 +132,16 @@ h1{
     border-bottom: 4px dotted #2270b7;
 }
 
-.about button{
-
+button{
     background: #2270b7;
-    color: #fff;
     width: 200px;
     height: 50px;
     margin-top: 20px;
+}
 
+button a{
+    color: #fff;
+    text-decoration: none;
 }
 
 .skills {
@@ -161,13 +175,10 @@ h1{
     grid-area: contact;
     background: #da9622;
     position: relative;
-
-
 }
 
 .contact h1{
     color: #fff;
-
 }
 
 .cont{
@@ -180,13 +191,10 @@ h1{
 
 form{
     display: inline;
-
     margin: 20px auto 0 auto;
     text-align: center;
     padding-bottom: 30px;
     padding-left: 20px;
-
-
 }
 
 form input{
@@ -206,14 +214,14 @@ form input{
 
 
 
-@media(max-width: 1200px ){
+@media(max-width: 1200px){
     .grid{
         width: 95%;
         grid-gap: 3%;
     }
 }
 
-@media(max-width: 800px ){
+@media(max-width: 800px){
     .grid{
         width: 100%;
         grid-template-areas: "header" "about" "skills" "education" "experience" "contact" "social" ;
@@ -281,30 +289,10 @@ form input{
 
 }
 
-
-.frame{
-    border-left: #2270b7 dotted 4px;
-    padding-left: 20px;
-    line-height: 1.5;
-}
-
-b{
-    color: #2270b7;
-}
-
-.education h2, .experience h2{
-    font-weight: bold;
-}
-
-h1 img{
-    width: 50px;
-}
-
 .social{
     grid-area: social;
     background: #da9622;
     padding:0 10px;
-
 }
 
 .social .links{
@@ -323,16 +311,15 @@ h1 img{
 .icon:hover{
     transform: scale(1.3);
 }
+
+
+
 /*TODO
 - добавить иконки svg
-- сделать 3-4 разных анимации*/
-
-
-/*TODO
+- сделать 3-4 разных анимации
 - поддержка браузерами
-- адаптивность
 - комментарии
 - перебрать весь код
-
+- придумать лого
 */
 
