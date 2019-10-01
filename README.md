@@ -1,1 +1,1 @@
-# Resume
+Поддерживается Mozilla 52, Safari 10.1, Opera 44, Google Chrome 57, MS Edge 16  и старше
